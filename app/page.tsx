@@ -23,10 +23,10 @@ export default function Home() {
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4"
         }`}
       >
-        <div className="flex items-center gap-2">
-          <div className="bg-linear-to-br from-indigo-500 to-purple-600 p-2 rounded-xl shadow-lg">
+        <div className="flex items-center gap-1">
+          <div className="bg-linear-to-br from-indigo-500 to-purple-600 p-1.5 rounded-lg shadow-md">
             <svg
-              className="w-6 h-6 text-white"
+              className="w-4 h-4 text-white"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -39,7 +39,7 @@ export default function Home() {
               />
             </svg>
           </div>
-          <h1 className="text-2xl font-bold bg-linear-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+          <h1 className="text-lg sm:text-xl font-bold bg-linear-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
             TermsCheck
           </h1>
         </div>
@@ -64,7 +64,12 @@ export default function Home() {
 
         <div>
           <a href="/policy-check">
-            <button className="bg-linear-to-r from-indigo-600 to-purple-600 text-white px-6 py-2.5 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 font-semibold">
+            <button
+              className="bg-linear-to-r from-indigo-600 to-purple-600 text-white 
+px-4 py-2 sm:px-6 sm:py-2.5 
+rounded-xl shadow-lg hover:shadow-xl hover:scale-105 
+transition-all duration-300 font-semibold text-sm sm:text-base"
+            >
               Try Analyzer →
             </button>
           </a>
