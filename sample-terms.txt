@@ -1,0 +1,39 @@
+Sample Terms and Conditions
+
+1. DATA COLLECTION AND SHARING
+By using our service, you grant us the irrevocable right to collect, use, and sell your personal data, including but not limited to browsing history, location data, contact information, and biometric data to third-party advertisers and data brokers without additional notice or compensation.
+
+2. AUTOMATIC RENEWAL AND BILLING
+Your subscription will automatically renew at the end of each billing period. You authorize us to charge your payment method for the renewal amount, which may increase at our sole discretion without prior notice. Failure to cancel at least 60 days before renewal will result in charges for the full year.
+
+3. LIMITATION OF LIABILITY
+You agree that we shall not be liable for any damages, losses, or expenses arising from the use of our service, including but not limited to data breaches, service interruptions, or third-party actions. By using our service, you waive all rights to legal claims against us.
+
+4. MANDATORY ARBITRATION
+You agree to resolve any disputes through binding arbitration in our jurisdiction. You waive your right to participate in class action lawsuits and agree to bear all arbitration costs, which may exceed $10,000.
+
+5. CONTENT OWNERSHIP
+By uploading content to our platform, you grant us a perpetual, worldwide, royalty-free license to use, modify, distribute, and monetize your content in any manner we choose, including for training AI models and creating derivative works.
+
+6. REFUND POLICY
+All sales are final. No refunds will be provided under any circumstances, including technical issues, dissatisfaction with the service, or failure to use the service.
+
+7. SERVICE MODIFICATIONS
+We reserve the right to modify, suspend, or discontinue any aspect of our service at any time without notice. We are not liable for any modifications or discontinuation of the service.
+
+8. COOKIES AND TRACKING
+We use cookies, web beacons, and other tracking technologies to monitor your activity across websites and applications. This data may be shared with advertising partners and analytics providers.
+
+9. ACCOUNT TERMINATION
+We may terminate your account at any time for any reason without notice or refund. Upon termination, you lose access to all content and data associated with your account.
+
+10. PRIVACY POLICY UPDATES
+We may update our privacy policy at any time. Continued use of the service after changes constitutes acceptance of the new terms. It is your responsibility to regularly review the privacy policy.
+
+11. THIRD-PARTY SERVICES
+We integrate with various third-party services that have their own terms and privacy policies. We are not responsible for the practices of these third parties.
+
+12. GOVERNING LAW
+These terms are governed by the laws of our jurisdiction. Any legal proceedings must be brought in courts located in our jurisdiction, regardless of your location.
+
+
