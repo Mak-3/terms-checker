@@ -1,0 +1,26 @@
+{
+  "name": "TermsCheck - AI Terms & Conditions Analyzer",
+  "short_name": "TermsCheck",
+  "description": "Analyze terms and conditions instantly with AI. Get clear risk categorization and plain English explanations.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#6366f1",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["business", "productivity", "utilities"],
+  "lang": "en-US",
+  "scope": "/"
+}
+

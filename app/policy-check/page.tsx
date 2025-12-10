@@ -161,8 +161,14 @@ export default function PolicyCheck() {
         for (let i = 1; i <= pdf.numPages; i++) {
           const page = await pdf.getPage(i);
           const textContent = await page.getTextContent();
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
           const pageText = textContent.items
-            .map((item: any) => item.str)
+            .map((item: any) => {
+              if ('str' in item) {
+                return item.str;
+              }
+              return '';
+            })
             .join(" ");
           fullText += pageText + "\n";
         }
@@ -249,7 +255,7 @@ export default function PolicyCheck() {
       <div className="max-w-5xl mx-auto relative z-10">
         {/* Back button */}
         <div className="mb-6">
-          <a href="/" className="inline-flex items-center gap-2 text-gray-600 hover:text-indigo-600 transition-colors font-medium group">
+          <a href="/" className="inline-flex items-center gap-2 text-gray-600 hover:text-indigo-600 transition-colors font-medium group" aria-label="Back to home">
             <svg className="w-5 h-5 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>

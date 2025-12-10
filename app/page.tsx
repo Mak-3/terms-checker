@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import FAQSchema from "./faq-schema";
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
@@ -9,7 +10,9 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="bg-linear-to-br from-indigo-50 via-white to-purple-50 min-h-screen flex flex-col items-center justify-start relative overflow-hidden">
+    <>
+      <FAQSchema />
+      <div className="bg-linear-to-br from-indigo-50 via-white to-purple-50 min-h-screen flex flex-col items-center justify-start relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-20 left-10 w-72 h-72 bg-indigo-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob" />
@@ -22,14 +25,16 @@ export default function Home() {
         className={`w-full max-w-7xl flex justify-between items-center py-6 px-6 z-10 transition-all duration-1000 ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4"
         }`}
+        role="banner"
       >
         <div className="flex items-center gap-1">
-          <div className="bg-linear-to-br from-indigo-500 to-purple-600 p-1.5 rounded-lg shadow-md">
+          <div className="bg-linear-to-br from-indigo-500 to-purple-600 p-1.5 rounded-lg shadow-md" role="img" aria-label="TermsCheck shield icon">
             <svg
               className="w-4 h-4 text-white"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
+              aria-hidden="true"
             >
               <path
                 strokeLinecap="round"
@@ -44,7 +49,7 @@ export default function Home() {
           </h1>
         </div>
 
-        <nav className="hidden md:flex space-x-8 text-gray-700 font-medium">
+        <nav className="hidden md:flex space-x-8 text-gray-700 font-medium" role="navigation" aria-label="Main navigation">
           <a
             href="#features"
             className="hover:text-indigo-600 transition-colors"
@@ -81,21 +86,22 @@ transition-all duration-300 font-semibold text-sm sm:text-base"
         className={`text-center px-4 mt-8 md:mt-16 z-10 transition-all duration-1000 delay-200 ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
         }`}
+        aria-label="Hero section"
       >
         <div className="inline-block mb-4 md:mb-6">
-          <span className="bg-linear-to-r from-indigo-100 to-purple-100 text-indigo-700 px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-semibold border border-indigo-200">
+          <span className="bg-linear-to-r from-indigo-100 to-purple-100 text-indigo-700 px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-semibold border border-indigo-200" role="note">
             🚀 AI-Powered Legal Analysis
           </span>
         </div>
 
-        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-extrabold text-gray-900 leading-tight max-w-4xl mx-auto px-2">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-extrabold text-gray-900 leading-tight max-w-4xl mx-auto px-2">
           Understand{" "}
           <span className="bg-linear-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
             Terms & Conditions
           </span>
           <br />
           in seconds, not hours
-        </h2>
+        </h1>
 
         <p className="text-gray-600 mt-4 md:mt-6 max-w-2xl mx-auto text-base md:text-lg lg:text-xl leading-relaxed px-4">
           Stop blindly accepting terms. Get instant AI-powered analysis that
@@ -188,9 +194,9 @@ transition-all duration-300 font-semibold text-sm sm:text-base"
         id="how-it-works"
       >
         <div className="bg-white/80 backdrop-blur-lg w-full max-w-5xl rounded-2xl md:rounded-3xl p-6 md:p-10 shadow-2xl border border-gray-200">
-          <h3 className="text-gray-900 font-bold text-2xl md:text-3xl mb-2 md:mb-3 text-center">
+          <h2 className="text-gray-900 font-bold text-2xl md:text-3xl mb-2 md:mb-3 text-center">
             How It Works
-          </h3>
+          </h2>
           <p className="text-center text-gray-600 text-sm md:text-base mb-6 md:mb-10 max-w-2xl mx-auto px-2">
             Our AI analyzes your documents and categorizes clauses by risk
             level, giving you clear insights instantly.
@@ -199,12 +205,13 @@ transition-all duration-300 font-semibold text-sm sm:text-base"
           <div className="grid md:grid-cols-3 gap-4 md:gap-8">
             <div className="group hover:scale-105 transition-all duration-300">
               <div className="bg-linear-to-br from-red-50 to-red-100 rounded-xl md:rounded-2xl p-4 md:p-6 border-2 border-red-200 h-full">
-                <div className="bg-white rounded-lg md:rounded-xl p-2 md:p-3 w-fit mb-3 md:mb-4 shadow-md">
+                <div className="bg-white rounded-lg md:rounded-xl p-2 md:p-3 w-fit mb-3 md:mb-4 shadow-md" role="img" aria-label="Critical risk warning icon">
                   <svg
                     className="w-6 h-6 md:w-8 md:h-8 text-red-600"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
+                    aria-hidden="true"
                   >
                     <path
                       strokeLinecap="round"
@@ -214,9 +221,9 @@ transition-all duration-300 font-semibold text-sm sm:text-base"
                     />
                   </svg>
                 </div>
-                <h4 className="font-bold text-lg md:text-xl text-gray-900 mb-2">
+                <h2 className="font-bold text-lg md:text-xl text-gray-900 mb-2">
                   Critical Risks
-                </h4>
+                </h2>
                 <p className="text-gray-700 text-sm md:text-base leading-relaxed">
                   Flags dangerous clauses like data selling, unlimited
                   liability, and hidden fees that could seriously harm you.
@@ -226,12 +233,13 @@ transition-all duration-300 font-semibold text-sm sm:text-base"
 
             <div className="group hover:scale-105 transition-all duration-300">
               <div className="bg-linear-to-br from-orange-50 to-orange-100 rounded-xl md:rounded-2xl p-4 md:p-6 border-2 border-orange-200 h-full">
-                <div className="bg-white rounded-lg md:rounded-xl p-2 md:p-3 w-fit mb-3 md:mb-4 shadow-md">
+                <div className="bg-white rounded-lg md:rounded-xl p-2 md:p-3 w-fit mb-3 md:mb-4 shadow-md" role="img" aria-label="Medium risk information icon">
                   <svg
                     className="w-6 h-6 md:w-8 md:h-8 text-orange-600"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
+                    aria-hidden="true"
                   >
                     <path
                       strokeLinecap="round"
@@ -241,9 +249,9 @@ transition-all duration-300 font-semibold text-sm sm:text-base"
                     />
                   </svg>
                 </div>
-                <h4 className="font-bold text-lg md:text-xl text-gray-900 mb-2">
+                <h2 className="font-bold text-lg md:text-xl text-gray-900 mb-2">
                   Medium Risks
-                </h4>
+                </h2>
                 <p className="text-gray-700 text-sm md:text-base leading-relaxed">
                   Highlights concerning terms like limited refunds and
                   third-party data sharing you should be aware of.
@@ -253,12 +261,13 @@ transition-all duration-300 font-semibold text-sm sm:text-base"
 
             <div className="group hover:scale-105 transition-all duration-300">
               <div className="bg-linear-to-br from-green-50 to-green-100 rounded-xl md:rounded-2xl p-4 md:p-6 border-2 border-green-200 h-full">
-                <div className="bg-white rounded-lg md:rounded-xl p-2 md:p-3 w-fit mb-3 md:mb-4 shadow-md">
+                <div className="bg-white rounded-lg md:rounded-xl p-2 md:p-3 w-fit mb-3 md:mb-4 shadow-md" role="img" aria-label="Low risk checkmark icon">
                   <svg
                     className="w-6 h-6 md:w-8 md:h-8 text-green-600"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
+                    aria-hidden="true"
                   >
                     <path
                       strokeLinecap="round"
@@ -268,9 +277,9 @@ transition-all duration-300 font-semibold text-sm sm:text-base"
                     />
                   </svg>
                 </div>
-                <h4 className="font-bold text-lg md:text-xl text-gray-900 mb-2">
+                <h2 className="font-bold text-lg md:text-xl text-gray-900 mb-2">
                   Standard Clauses
-                </h4>
+                </h2>
                 <p className="text-gray-700 text-sm md:text-base leading-relaxed">
                   Identifies benign, industry-standard terms so you can focus on
                   what actually matters.
@@ -316,11 +325,12 @@ transition-all duration-300 font-semibold text-sm sm:text-base"
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
         }`}
         id="about"
+
       >
         <div className="bg-linear-to-br from-indigo-600 to-purple-600 rounded-2xl md:rounded-3xl p-6 md:p-12 shadow-2xl">
-          <h3 className="text-white text-2xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4">
+          <h2 className="text-white text-2xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4">
             Protect Yourself from Hidden Risks
-          </h3>
+          </h2>
           <p className="text-indigo-100 text-sm md:text-base lg:text-lg max-w-2xl mx-auto mb-6 md:mb-8 leading-relaxed px-2">
             Don't sign away your rights without knowing. Get instant, clear
             analysis of any terms and conditions— with support for text, PDFs,
@@ -334,9 +344,10 @@ transition-all duration-300 font-semibold text-sm sm:text-base"
         </div>
       </div>
 
-      <footer className="w-full border-t border-gray-200 py-8 text-center text-gray-500 text-sm z-10">
+      <footer className="w-full border-t border-gray-200 py-8 text-center text-gray-500 text-sm z-10" role="contentinfo">
         <p>© 2025 TermsCheck. Made with ❤️ to protect your rights.</p>
       </footer>
-    </div>
+      </div>
+    </>
   );
 }
